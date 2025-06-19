@@ -51,16 +51,42 @@ def extract_value(excipient_str,excipient):
 # Create new columns for each unique excipient and extract their concentrations
 for excipient in unique_excipients:
     new_column_name = excipient + '_conc' 
-    # replace all uppercase letters with lowercase letters in the new column name
-    new_column_name = new_column_name.lower()
     # Apply the extract_value function to the 'composition_without_ph' column for each excipient
     df[new_column_name] = df['composition_without_ph'].apply(lambda x: extract_value(x, excipient))
 # Drop the 'composition_without_ph' column as it is no longer needed
 df.drop('composition_without_ph', axis=1, inplace=True)
 
+#-----------------------------------------------------------------------------------
+# Data Correction
 
-pd.set_option('display.max_colwidth', None)
-df.head()  # Display the first 5 rows of the DataFrame with new columns for excipients
+# For a better overview data set is reduced to the most interessting variables we want to examine. Therefore id columns are dropped.
+df = df.drop(columns=['product', 'formulation_title'])
 
-#export the DataFrame to a new CSV file and overwrite the existing one 
-df.to_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\raw_data_all_features.csv', index=False)
+# change data type in order to make pandas functions more efficient
+df['protein_format'] = pd.Categorical(df['protein_format'])
+
+# Eliminate spaces in all column names
+df.columns = df.columns.str.replace(' ', '_')   
+# Make sure column names are lower case a
+df.columns = df.columns.str.lower()
+
+#Define input (X) and target (y)
+X = df.drop(columns=['tm_c'])  # Drop the target variable 'tm_c' from the features
+y = df['tm_c']   
+
+#-----------------------------------------------------------------------------------
+# For the followeing preporessing steps the data set is split into a training and test set.
+# Only the training set is used for preprocessing, while the test set remains untouched until the final evaluation.
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#----------------------------------------------------------------------------------
+
+# 5. Wieder zusammenführen: Features + Target in einem DataFrame
+train_df = X_train.copy()
+train_df['tm_c'] = y_train
+
+test_df = X_test.copy()
+test_df['tm_c'] = y_test
+
+# 6. Abspeichern als CSV
+train_df.to_csv(r"C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_train_data.csv", index=False)
+test_df.to_csv(r"C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_test_data.csv", index=False)

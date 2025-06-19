@@ -7,7 +7,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # import the CSV file data\Coded_FS_Data.csv
-df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\preprocessed_data.csv')
+df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\df_train_processed.csv')
 df.head() #Display the first 5 rows of the DataFrame
 
 #Define input (X) and target (y)
