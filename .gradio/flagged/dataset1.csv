@@ -1,2 +1,3 @@
 Isoelectric Point,Molecular Weight (Da),Product Concentration (mg/ml),pH,KCl Concentration,Fructose Concentration,Succinate Concentration,L-Lysine Concentration,Mannitol Concentration,PS50 Concentration,PS80 Concentration,Citrate Concentration,Protein Format IGG3,Protein Format IGG4,Protein Format Knob-Hole,Protein Format Nano MB,output,timestamp
 6,150,60,5,16,50,39,19,3,0.2,'-1,0,1,0,0,0,Predicted Tm (°C): 159.01,2025-06-09 16:37:52.842549
+6,400000,258,5.2,24,67,0,67,0,0.3,0,0,1,0,0,0,,2025-06-20 14:34:59.327660

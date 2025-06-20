@@ -1,8 +1,6 @@
 import pandas as pd
 import joblib
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.metrics import mean_squared_error, r2_score
 
 # import the CSV file data\Coded_FS_Data.csv
 df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\df_train_processed.csv')
