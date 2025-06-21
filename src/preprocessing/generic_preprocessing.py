@@ -1,16 +1,8 @@
-import pandas as pd
-import numpy as np
-import re
-from sklearn.linear_model import LinearRegression       
+import pandas as pd      
 from sklearn.model_selection import train_test_split
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
 # import the CSV file data\raw_data.csv
@@ -53,11 +45,6 @@ df_train_processed = pd.concat([train_numeric, train_cat_encoded], axis=1)
 #export the DataFrame to a new CSV file and overwrite the existing one 
 df_train_processed.to_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\df_train_processed.csv', index=False)
 
-print(df_train_processed.head())  # Display the first 5 rows of the preprocessed DataFrame   
-#-----------------------------------------------------------------------------------
-
-
-
 #------------------------------------------------------------------------------------
 # import the test data
 df_test = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_test_data.csv')
@@ -79,7 +66,6 @@ test_cat_encoded.columns = test_cat_encoded.columns.str.lower()
 df_test_processed = pd.concat([test_numeric, test_cat_encoded], axis=1) 
 #export the DataFrame to a new CSV file and overwrite the existing one
 df_test_processed.to_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\df_test_processed.csv', index=False)
-print(df_test_processed.head())  # Display the first 5 rows of the preprocessed DataFrame
 #-----------------------------------------------------------------------------------
 # Display the shape of the preprocessed DataFrames
 # 

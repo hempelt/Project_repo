@@ -4,7 +4,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 
 # import the CSV file data\Coded_FS_Data.csv
 df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\df_train_processed.csv')
-df.head() #Display the first 5 rows of the DataFrame
+
 
 #Define input (X) and target (y)
 X = df.drop(columns=['tm_c'])  # Drop the target variable 'tm_c' from the features

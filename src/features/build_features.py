@@ -65,10 +65,12 @@ df = df.drop(columns=['product', 'formulation_title'])
 # change data type in order to make pandas functions more efficient
 df['protein_format'] = pd.Categorical(df['protein_format'])
 
-# Eliminate spaces in all column names
+# Eliminate spaces and in all column names
 df.columns = df.columns.str.replace(' ', '_')   
 # Make sure column names are lower case a
 df.columns = df.columns.str.lower()
+# Remove special characters from column names
+df.columns = df.columns.str.replace(r'[^a-z0-9_]', '', regex=True) 
 
 #Define input (X) and target (y)
 X = df.drop(columns=['tm_c'])  # Drop the target variable 'tm_c' from the features

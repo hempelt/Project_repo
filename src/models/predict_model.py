@@ -17,27 +17,29 @@ validation_text = (
 )
 
 
-
 # Vorhersagefunktion
 def predict_tm_c(
     isoelectric_point, molecular_weight_da, product_conc_mg_ml, ph,
-    kcl_conc, fructose_conc, succinate_conc, l_lysine_conc,
-    mannitol_conc, ps50_conc, ps80_conc, citrate_conc,
-    protein_format_igg3, protein_format_igg4,
-    protein_format_knob_hole, protein_format_nano_mb
+       ps80_conc, citrate_conc, llysine_conc, succinate_conc,
+       kcl_conc, fructose_conc, ps50_conc, mannitol_conc,
+       protein_format_doppelmab, protein_format_igg3,
+       protein_format_igg4, protein_format_knob_hole,
+       protein_format_nano_mb
 ):
     input_data = pd.DataFrame([[  # 2D-Array mit einer Zeile
-        isoelectric_point, molecular_weight_da, product_conc_mg_ml, ph,
-        kcl_conc, fructose_conc, succinate_conc, l_lysine_conc,
-        mannitol_conc, ps50_conc, ps80_conc, citrate_conc,
-        protein_format_igg3, protein_format_igg4,
-        protein_format_knob_hole, protein_format_nano_mb
+       isoelectric_point, molecular_weight_da, product_conc_mg_ml, ph,
+       ps80_conc, citrate_conc, llysine_conc, succinate_conc,
+       kcl_conc, fructose_conc, ps50_conc, mannitol_conc,
+       protein_format_doppelmab, protein_format_igg3,
+       protein_format_igg4, protein_format_knob_hole,
+       protein_format_nano_mb
     ]], columns=[
         'isoelectric_point', 'molecular_weight_da', 'product_conc_mg_ml', 'ph',
-        'kcl_conc', 'fructose_conc', 'succinate_conc', 'l-lysine_conc',
-        'mannitol_conc', 'ps50_conc', 'ps80_conc', 'citrate_conc',
-        'protein_format_igg3', 'protein_format_igg4',
-        'protein_format_knob_hole', 'protein_format_nano_mb'
+       'ps80_conc', 'citrate_conc', 'llysine_conc', 'succinate_conc',
+       'kcl_conc', 'fructose_conc', 'ps50_conc', 'mannitol_conc',
+       'protein_format_doppelmab', 'protein_format_igg3',
+       'protein_format_igg4', 'protein_format_knob_hole',
+       'protein_format_nano_mb'
     ])
     
     prediction = model.predict(input_data)[0]
@@ -45,22 +47,24 @@ def predict_tm_c(
 
 # Gradio Interface
 inputs = [
-    gr.Slider(label="Isoelectric Point", minimum=0.0, maximum=13.3, step=0.01, value=6.0),              # 2 * 6.6534
-    gr.Slider(label="Molecular Weight (Da)", minimum=0.0, maximum=1060459.92, step=1000, value=400000), # 2 * 530229.96
-    gr.Slider(label="Product Concentration (mg/ml)", minimum=0.0, maximum=1036.8, step=1.0, value=258.0),# 2 * 518.4
-    gr.Slider(label="pH", minimum=0.0, maximum=14.0, step=0.1, value=5.2),                               # 2 * 7.0 (sinnvoller fix bei 14.0)
-    gr.Slider(label="KCl Concentration", minimum=0.0, maximum=270.0, step=1.0, value=24.0),              # 2 * 135.0
-    gr.Slider(label="Fructose Concentration", minimum=0.0, maximum=540.0, step=1.0, value=67.0),         # 2 * 270.0
-    gr.Slider(label="Succinate Concentration", minimum=0.0, maximum=30.0, step=0.1, value=0.0),          # 2 * 15.0
-    gr.Slider(label="L-Lysine Concentration", minimum=0.0, maximum=270.0, step=1.0, value=67.0),         # 2 * 135.0
-    gr.Slider(label="Mannitol Concentration", minimum=0.0, maximum=540.0, step=1.0, value=0.0),          # 2 * 270.0
-    gr.Slider(label="PS50 Concentration", minimum=0.0, maximum=0.8, step=0.01, value=0.3),               # 2 * 0.4
-    gr.Slider(label="PS80 Concentration", minimum=0.0, maximum=0.8, step=0.01, value=0.0),               # 2 * 0.4
-    gr.Slider(label="Citrate Concentration", minimum=0.0, maximum=30.0, step=0.1, value=0.0),            # 2 * 15.0
+    gr.Slider(label="Isoelectric Point", minimum=0.0, maximum=13.3, step=0.01, value=6.0),              
+    gr.Slider(label="Molecular Weight (Da)", minimum=0.0, maximum=1060459.92, step=1000, value=400000), 
+    gr.Slider(label="Product Concentration (mg/ml)", minimum=0.0, maximum=1036.8, step=1.0, value=258.0),
+    gr.Slider(label="pH", minimum=0.0, maximum=14.0, step=0.1, value=5.2),                               
+    gr.Slider(label="KCl Concentration", minimum=0.0, maximum=270.0, step=1.0, value=24.0),              
+    gr.Slider(label="Fructose Concentration", minimum=0.0, maximum=540.0, step=1.0, value=67.0),         
+    gr.Slider(label="Succinate Concentration", minimum=0.0, maximum=30.0, step=0.1, value=0.0),          
+    gr.Slider(label="L-Lysine Concentration", minimum=0.0, maximum=270.0, step=1.0, value=67.0),         
+    gr.Slider(label="Mannitol Concentration", minimum=0.0, maximum=540.0, step=1.0, value=0.0),          
+    gr.Slider(label="PS50 Concentration", minimum=0.0, maximum=0.8, step=0.01, value=0.3),               
+    gr.Slider(label="PS80 Concentration", minimum=0.0, maximum=0.8, step=0.01, value=0.0),               
+    gr.Slider(label="Citrate Concentration", minimum=0.0, maximum=30.0, step=0.1, value=0.0),    
+    gr.Radio([0, 1], label="Protein Format Doppelmab", value=0),        
     gr.Radio([0, 1], label="Protein Format IGG3", value=1),  
     gr.Radio([0, 1], label="Protein Format IGG4", value=0),
     gr.Radio([0, 1], label="Protein Format Knob-Hole", value=0),
     gr.Radio([0, 1], label="Protein Format Nano MB", value=0),
+    
 ]
 
 # UI-Komponenten
