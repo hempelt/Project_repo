@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/17e50e80380a4defa95eae2da0fdedac/artifacts
+end_time: 1751034837697
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 17e50e80380a4defa95eae2da0fdedac
+run_name: caring-goat-39
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751034837622
+status: 4
+tags: []
+user_id: hempe

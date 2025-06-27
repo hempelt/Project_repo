@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/a0e1cf9fe91f491685a9fab441480f28/artifacts
+end_time: 1751033543825
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a0e1cf9fe91f491685a9fab441480f28
+run_name: likeable-eel-125
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751033543759
+status: 3
+tags: []
+user_id: hempe

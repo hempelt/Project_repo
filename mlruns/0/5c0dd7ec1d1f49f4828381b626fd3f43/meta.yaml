@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/5c0dd7ec1d1f49f4828381b626fd3f43/artifacts
+end_time: 1751035633102
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5c0dd7ec1d1f49f4828381b626fd3f43
+run_name: bold-cub-261
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751035630295
+status: 3
+tags: []
+user_id: hempe

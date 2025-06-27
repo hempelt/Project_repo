@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/6fbdd1f1fb1e49cfbd2f31de43bb57fe/artifacts
+end_time: 1751032276018
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6fbdd1f1fb1e49cfbd2f31de43bb57fe
+run_name: masked-stork-756
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751032275953
+status: 3
+tags: []
+user_id: hempe

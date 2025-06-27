@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/67c5584a90dc445ab0ec32b70e495555/artifacts
+end_time: 1751035700404
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 67c5584a90dc445ab0ec32b70e495555
+run_name: upbeat-vole-719
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751035700334
+status: 3
+tags: []
+user_id: hempe

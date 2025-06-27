@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/98a9722e174c47b68036cd46527218d6/artifacts
+end_time: 1751034808891
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 98a9722e174c47b68036cd46527218d6
+run_name: angry-gnu-57
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751034808819
+status: 3
+tags: []
+user_id: hempe

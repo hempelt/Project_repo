@@ -1,10 +1,16 @@
 import gradio as gr
 import pandas as pd
-import joblib
-import matplotlib.pyplot as plt
+import mlflow
+import mlflow.sklearn
 
-# Modell laden
-model = joblib.load('C:/Users/hempe/Studium/Real_Project/Project_repo/models/gradient_boosting_model.pkl')
+# Read the latest run ID from the file
+with open("latest_run.txt", "r") as f:
+    run_id = f.read().strip()
+
+# Load model from MLflow via Run-ID
+model_uri = f"runs:/{run_id}/gradient_boosting_model"
+model = mlflow.sklearn.load_model(model_uri)
+
 
 # Load validation results
 cv_results = pd.read_csv(r'C:/Users/hempe/Studium/Real_Project/Project_repo/models/validation_results.csv')

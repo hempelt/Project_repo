@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/models/m-f3e04e70f30b46dd9d554f8e12248e0f/artifacts
+creation_timestamp: 1751034600092
+experiment_id: '0'
+last_updated_timestamp: 1751034602721
+model_id: m-f3e04e70f30b46dd9d554f8e12248e0f
+model_type: null
+name: gradient_boosting_model
+source_run_id: d634a3caeded45b9bd3c2ec1588241c9
+status: 2
+status_message: null

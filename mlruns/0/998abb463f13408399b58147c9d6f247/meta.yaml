@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/998abb463f13408399b58147c9d6f247/artifacts
+end_time: 1751031765663
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 998abb463f13408399b58147c9d6f247
+run_name: thundering-horse-104
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751031762980
+status: 3
+tags: []
+user_id: hempe
