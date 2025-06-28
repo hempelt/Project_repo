@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.model_selection import cross_validate
 import mlflow.sklearn
 
+mlflow.set_experiment("tm_prediction_experiment")
+
 # Read the latest run ID from the file
 with open("latest_run.txt", "r") as f:
     run_id = f.read().strip()

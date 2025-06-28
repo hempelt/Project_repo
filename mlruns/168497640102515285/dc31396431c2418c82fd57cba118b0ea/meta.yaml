@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/dc31396431c2418c82fd57cba118b0ea/artifacts
+end_time: 1751116507218
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: active
+run_id: dc31396431c2418c82fd57cba118b0ea
+run_name: likeable-hound-112
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751116507061
+status: 3
+tags: []
+user_id: hempe

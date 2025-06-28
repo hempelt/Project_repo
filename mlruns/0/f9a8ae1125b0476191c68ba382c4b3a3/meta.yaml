@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/f9a8ae1125b0476191c68ba382c4b3a3/artifacts
+end_time: 1751116326421
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f9a8ae1125b0476191c68ba382c4b3a3
+run_name: bald-midge-92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751116326304
+status: 3
+tags: []
+user_id: hempe

@@ -12,6 +12,11 @@ df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\process
 X = df.drop(columns=['tm_c'])
 y = df['tm_c']   
 
+# Set MLflow tracking URI and experiment
+# Make sure to change the path to your local MLflow tracking server
+mlflow.set_tracking_uri("file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns")
+mlflow.set_experiment("tm_prediction_experiment")
+
 # Start MLflow Run
 with mlflow.start_run() as run:
     # Train gradient boosting regressor model with optimized hyperparamter
