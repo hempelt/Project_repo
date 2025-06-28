@@ -3,10 +3,8 @@ import numpy as np
 import re     
 from sklearn.model_selection import train_test_split
 
-# im port the CSV file data\raw_data.csv
-df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\raw_data.csv')
-df.head() #Display the first 5 rows of the DataFrame
-
+# import the CSV file data\raw_data.csv
+df = pd.read_csv('data/raw/raw_data.csv')
 
 #Create new feature ph
 df['ph'] = df['composition'].str.split(',').str[-1].str.extract(r'(\d+)').astype(float)
@@ -77,13 +75,13 @@ y = df['tm_c']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 #----------------------------------------------------------------------------------
 
-# 5. Wieder zusammenführen: Features + Target in einem DataFrame
+# Merge features + Target in one DataFrame
 train_df = X_train.copy()
 train_df['tm_c'] = y_train
 
 test_df = X_test.copy()
 test_df['tm_c'] = y_test
 
-# 6. Abspeichern als CSV
+# Save train und test data as seperate CSV files
 train_df.to_csv(r"C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_train_data.csv", index=False)
 test_df.to_csv(r"C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_test_data.csv", index=False)
