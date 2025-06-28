@@ -1,12 +1,7 @@
 import pandas as pd
 import numpy as np
-import re
-from sklearn.linear_model import LinearRegression       
+import re     
 from sklearn.model_selection import train_test_split
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import cross_val_score
 
 # im port the CSV file data\raw_data.csv
 df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\raw_data.csv')
