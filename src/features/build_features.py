@@ -1,21 +1,20 @@
 import pandas as pd
-import numpy as np
 import re     
 from sklearn.model_selection import train_test_split
 
-# import the CSV file data\raw_data.csv
+# import the CSV file data/raw_data.csv
 df = pd.read_csv('data/raw/raw_data.csv')
 
-#Create new feature ph
-df['ph'] = df['composition'].str.split(',').str[-1].str.extract(r'(\d+)').astype(float)
+#Extract pH value from column 'coposition' and create new feature 'ph'
+df['ph'] = df['composition'].str.split(',').str[-1].str.extract(r'(\d+\.?\d*)').astype(float)
 
 # ----Create a numeric feature for the concentration of every excipient in the 'composition' -----------------------------------------------------
 
-#Create new column Excipients
+#Create new column with all excipients and without pH value called 'composition_without_ph'
 df['composition_without_ph'] = df['composition'].str.split(',').str[0]
 df.drop('composition', axis=1, inplace=True)
 
-# Create a list to hold unique excipients 
+# Create a list to hold all excipients 
 excipients = []
 
 # For every value in the column 'composition_without_ph', split the string by '+' and strip whitespace and put them into a list
@@ -39,7 +38,7 @@ def extract_value(excipient_str,excipient):
             match = re.search(r'(\d+(\.\d+)?)', conc_excipient)
             if match:
                 return float(match.group(1))  
-    return 0  # Wenn kein Wert gefunden wurde, None zurückgeben
+    return 0  # If now match is found, return 0
 
 # Create new columns for each unique excipient and extract their concentrations
 for excipient in unique_excipients:
@@ -83,5 +82,5 @@ test_df = X_test.copy()
 test_df['tm_c'] = y_test
 
 # Save train und test data as seperate CSV files
-train_df.to_csv(r"C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_train_data.csv", index=False)
-test_df.to_csv(r"C:\Users\hempe\Studium\Real_Project\Project_repo\data\raw\all_features_test_data.csv", index=False)
+train_df.to_csv('data/raw/all_features_train_data.csv', index=False)
+test_df.to_csv('data/raw/all_features_test_data.csv', index=False)
