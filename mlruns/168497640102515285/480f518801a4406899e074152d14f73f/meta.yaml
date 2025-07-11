@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/480f518801a4406899e074152d14f73f/artifacts
+deleted_time: 1752241010872
 end_time: 1751116275415
 entry_point_name: ''
 experiment_id: '168497640102515285'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 480f518801a4406899e074152d14f73f
 run_name: illustrious-crab-563
 source_name: ''

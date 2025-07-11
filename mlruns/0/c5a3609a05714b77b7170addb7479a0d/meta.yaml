@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/c5a3609a05714b77b7170addb7479a0d/artifacts
+deleted_time: 1752238422064
 end_time: 1751034827146
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: c5a3609a05714b77b7170addb7479a0d
 run_name: sincere-foal-451
 source_name: ''

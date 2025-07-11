@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/b70b3b37e2e54543b92c857eea9ae48a/artifacts
+deleted_time: 1752238422134
 end_time: 1751035881810
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b70b3b37e2e54543b92c857eea9ae48a
 run_name: calm-shoat-279
 source_name: ''

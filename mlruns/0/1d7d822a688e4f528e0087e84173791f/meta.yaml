@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/1d7d822a688e4f528e0087e84173791f/artifacts
+deleted_time: 1752238422144
 end_time: 1751034218349
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 1d7d822a688e4f528e0087e84173791f
 run_name: bemused-worm-134
 source_name: ''

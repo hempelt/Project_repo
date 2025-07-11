@@ -4,8 +4,8 @@ import mlflow.sklearn
 from sklearn.ensemble import GradientBoostingRegressor
 from mlflow.models.signature import infer_signature
 
-# import the CSV file data\df_train_processed.csv
-df = pd.read_csv(r'C:\Users\hempe\Studium\Real_Project\Project_repo\data\processed\df_train_processed.csv')
+# import the processed training data
+df = pd.read_csv('data/processed/df_train_processed.csv')
 
 
 # Define features (X) and target (y)
@@ -50,7 +50,7 @@ with mlflow.start_run() as run:
     with open("latest_run.txt", "w") as f:
         f.write(run.info.run_id)
 
-    print("Model successfully logged!")
+    print("✅ Model successfully logged!")
     print("Run ID:", run.info.run_id)
     print("Run ID saved to latest_run.txt")
 

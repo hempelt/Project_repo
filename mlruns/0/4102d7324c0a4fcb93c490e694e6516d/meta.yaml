@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/4102d7324c0a4fcb93c490e694e6516d/artifacts
+deleted_time: 1752238422066
 end_time: 1751031675655
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 4102d7324c0a4fcb93c490e694e6516d
 run_name: overjoyed-steed-678
 source_name: ''

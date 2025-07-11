@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/98a9722e174c47b68036cd46527218d6/artifacts
+deleted_time: 1752238422149
 end_time: 1751034808891
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 98a9722e174c47b68036cd46527218d6
 run_name: angry-gnu-57
 source_name: ''

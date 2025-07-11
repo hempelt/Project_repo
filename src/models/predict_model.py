@@ -2,6 +2,10 @@ import gradio as gr
 import pandas as pd
 import mlflow
 import mlflow.sklearn
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt 
+import seaborn as sns
 
 # Set the MLflow experiment name
 mlflow.set_experiment("tm_prediction_experiment")
@@ -14,17 +18,44 @@ with open("latest_run.txt", "r") as f:
 model_uri = f"runs:/{run_id}/gradient_boosting_model"
 model = mlflow.sklearn.load_model(model_uri)
 
-# Load validation results (cross-validation metrics)
-cv_results = pd.read_csv(
-    r'C:/Users/hempe/Studium/Real_Project/Project_repo/models/validation_results.csv'
-)
+# Load valudation data from metrics of the same run
+client = mlflow.tracking.MlflowClient()
+run = client.get_run(run_id)
+metrics = run.data.metrics
+
+rmse = metrics.get("rmse")
+r2 = metrics.get("r2")
 
 # Format the cross-validation results for display
 validation_text = (
-    f"### 🔍 Model Validation (5-Fold CV)\n"
-    f"- **RMSE**: {cv_results['RMSE'].mean():.2f} ± {cv_results['RMSE'].std():.2f}\n"
-    f"- **R²**: {cv_results['R2'].mean():.2f} ± {cv_results['R2'].std():.2f}"
+    f"### 🔍 Model Validation\n"
+    f"- **RMSE**: {rmse:.2f}\n"
+    f"- **R²**: {r2:.2f}"
 )
+
+# Function to generate and save feature importance plot
+def generate_feature_importance_plot():
+    importances = model.feature_importances_
+    features = model.feature_names_in_
+
+    feat_imp_df = pd.DataFrame({
+        'Feature': features,
+        'Importance': importances
+    }).sort_values(by='Importance', ascending=False)
+
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x='Importance', y='Feature', data=feat_imp_df, palette='Blues_d')
+    plt.title('Feature Importance - GradientBoostingRegressor')
+    plt.xlabel('Importance Score')
+    plt.ylabel('Feature')
+    plt.tight_layout()
+    plot_path = "data/processed/feature_importance.png"
+    plt.savefig(plot_path)
+    plt.close()
+    print(f"✅ Saving feature importance plot to: {plot_path}")
+    return plot_path
+
+
 
 # Prediction function for Gradio
 def predict_tm_c(
@@ -51,6 +82,9 @@ def predict_tm_c(
         'protein_format_igg4', 'protein_format_knob_hole',
         'protein_format_nano_mb'
     ])
+
+    # Ensure the input DataFrame has the same columns as the model expects
+    input_data = input_data[model.feature_names_in_]
 
     # Predict Tm
     prediction = model.predict(input_data)[0]
@@ -79,14 +113,21 @@ inputs = [
     ),
 ]
 
-# Gradio Interface
-demo = gr.Interface(
-    fn=predict_tm_c,
-    inputs=inputs,
-    outputs="text",
-    title="Tm Prediction Dashboard",
-    description=validation_text
-)
+# Build Gradio App with Tabs
+with gr.Blocks() as demo:
+    with gr.Tab("🔬 Predict Tm"):
+        gr.Markdown(validation_text)
+        output = gr.Textbox(label="Prediction Result")
+        gr.Interface(fn=predict_tm_c, inputs=inputs, outputs=output)
+
+    with gr.Tab("📊 Feature Importance"):
+        plot_button = gr.Button("Generate Feature Importance Plot")
+        plot_output = gr.Image(type="filepath")
+
+        # Button-Callback
+        plot_button.click(fn=generate_feature_importance_plot, outputs=plot_output)
+
 
 # Launch the app with a shareable link
 demo.launch(share=True)
+

@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/13064f3159dc4295846393ffc6000bc6/artifacts
+deleted_time: 1752238422090
 end_time: 1751033898984
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 13064f3159dc4295846393ffc6000bc6
 run_name: legendary-calf-817
 source_name: ''

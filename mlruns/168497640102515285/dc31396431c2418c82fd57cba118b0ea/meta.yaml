@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/dc31396431c2418c82fd57cba118b0ea/artifacts
+deleted_time: 1752241010873
 end_time: 1751116507218
 entry_point_name: ''
 experiment_id: '168497640102515285'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: dc31396431c2418c82fd57cba118b0ea
 run_name: likeable-hound-112
 source_name: ''

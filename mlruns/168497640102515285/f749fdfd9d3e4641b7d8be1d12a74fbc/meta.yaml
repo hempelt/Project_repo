@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/f749fdfd9d3e4641b7d8be1d12a74fbc/artifacts
+deleted_time: 1752241010857
+end_time: 1752220303151
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: deleted
+run_id: f749fdfd9d3e4641b7d8be1d12a74fbc
+run_name: exultant-mink-172
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752220300191
+status: 3
+tags: []
+user_id: hempe

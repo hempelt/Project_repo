@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/248b7c6328f94ac1a7df4f41a5d64bb5/artifacts
+deleted_time: 1752238422020
 end_time: 1751034959214
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 248b7c6328f94ac1a7df4f41a5d64bb5
 run_name: zealous-sloth-411
 source_name: ''

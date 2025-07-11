@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/c72912757e3c4c0f8243db405ffdbd11/artifacts
+deleted_time: 1752238422023
 end_time: 1751034225755
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: c72912757e3c4c0f8243db405ffdbd11
 run_name: victorious-owl-357
 source_name: ''

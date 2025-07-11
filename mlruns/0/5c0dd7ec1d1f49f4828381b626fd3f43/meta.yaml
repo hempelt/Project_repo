@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/5c0dd7ec1d1f49f4828381b626fd3f43/artifacts
+deleted_time: 1752238422137
 end_time: 1751035633102
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5c0dd7ec1d1f49f4828381b626fd3f43
 run_name: bold-cub-261
 source_name: ''

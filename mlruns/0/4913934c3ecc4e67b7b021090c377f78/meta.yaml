@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/4913934c3ecc4e67b7b021090c377f78/artifacts
+deleted_time: 1752238422136
 end_time: 1751034869535
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 4913934c3ecc4e67b7b021090c377f78
 run_name: bittersweet-kite-7
 source_name: ''

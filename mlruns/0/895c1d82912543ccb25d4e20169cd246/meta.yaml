@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/895c1d82912543ccb25d4e20169cd246/artifacts
+deleted_time: 1752238422089
 end_time: 1751115491876
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 895c1d82912543ccb25d4e20169cd246
 run_name: overjoyed-ox-657
 source_name: ''

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/71e831d1b60f4f0abcedff7f21a8283e/artifacts
+deleted_time: 1752241010852
+end_time: 1752220307562
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: deleted
+run_id: 71e831d1b60f4f0abcedff7f21a8283e
+run_name: gifted-hog-418
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752220307489
+status: 3
+tags: []
+user_id: hempe

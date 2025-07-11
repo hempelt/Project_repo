@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/17e50e80380a4defa95eae2da0fdedac/artifacts
+deleted_time: 1752238422123
 end_time: 1751034837697
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 17e50e80380a4defa95eae2da0fdedac
 run_name: caring-goat-39
 source_name: ''

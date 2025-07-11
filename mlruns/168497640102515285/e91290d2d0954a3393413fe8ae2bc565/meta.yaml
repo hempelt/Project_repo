@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/e91290d2d0954a3393413fe8ae2bc565/artifacts
+end_time: 1752241217604
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: active
+run_id: e91290d2d0954a3393413fe8ae2bc565
+run_name: trusting-shrike-917
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752241170430
+status: 3
+tags: []
+user_id: hempe

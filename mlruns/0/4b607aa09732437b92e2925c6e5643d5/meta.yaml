@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/4b607aa09732437b92e2925c6e5643d5/artifacts
+deleted_time: 1752238422024
 end_time: 1751034793420
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 4b607aa09732437b92e2925c6e5643d5
 run_name: vaunted-trout-285
 source_name: ''

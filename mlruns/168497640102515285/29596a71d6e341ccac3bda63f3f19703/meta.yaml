@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/29596a71d6e341ccac3bda63f3f19703/artifacts
+deleted_time: 1752241010841
+end_time: 1752235899669
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: deleted
+run_id: 29596a71d6e341ccac3bda63f3f19703
+run_name: grandiose-midge-185
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752235895547
+status: 3
+tags: []
+user_id: hempe

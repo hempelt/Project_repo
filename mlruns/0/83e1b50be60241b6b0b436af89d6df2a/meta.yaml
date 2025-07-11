@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/83e1b50be60241b6b0b436af89d6df2a/artifacts
+deleted_time: 1752238422042
 end_time: 1751114530007
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 83e1b50be60241b6b0b436af89d6df2a
 run_name: traveling-snipe-323
 source_name: ''

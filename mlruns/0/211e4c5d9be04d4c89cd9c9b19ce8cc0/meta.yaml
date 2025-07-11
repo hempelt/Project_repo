@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/211e4c5d9be04d4c89cd9c9b19ce8cc0/artifacts
+deleted_time: 1752238422108
 end_time: 1751031498097
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 211e4c5d9be04d4c89cd9c9b19ce8cc0
 run_name: flawless-ape-966
 source_name: ''

@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/addc21708a334842b91aef87c591cb95/artifacts
+deleted_time: 1752238422086
 end_time: 1751033253162
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: addc21708a334842b91aef87c591cb95
 run_name: resilient-finch-57
 source_name: ''

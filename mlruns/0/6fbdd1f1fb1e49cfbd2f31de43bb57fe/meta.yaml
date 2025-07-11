@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/0/6fbdd1f1fb1e49cfbd2f31de43bb57fe/artifacts
+deleted_time: 1752238422067
 end_time: 1751032276018
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 6fbdd1f1fb1e49cfbd2f31de43bb57fe
 run_name: masked-stork-756
 source_name: ''
