@@ -4,17 +4,15 @@ import mlflow.sklearn
 from sklearn.ensemble import GradientBoostingRegressor
 from mlflow.models.signature import infer_signature
 
-# import the processed training data
+# Import the processed training data 
 df = pd.read_csv('data/processed/df_train_processed.csv')
-
 
 # Define features (X) and target (y)
 X = df.drop(columns=['tm_c'])
 y = df['tm_c']   
 
 # Set MLflow tracking URI and experiment
-# Make sure to change the path to your local MLflow tracking server
-mlflow.set_tracking_uri("file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns")
+mlflow.set_tracking_uri("file:./mlruns")
 mlflow.set_experiment("tm_prediction_experiment")
 
 # Start MLflow Run
@@ -29,7 +27,7 @@ with mlflow.start_run() as run:
     )
     model.fit(X, y)
 
- # Log parameters
+    # Log parameters
     mlflow.log_param("learning_rate", 0.1)
     mlflow.log_param("max_depth", 4)
     mlflow.log_param("n_estimators", 200)
@@ -41,12 +39,12 @@ with mlflow.start_run() as run:
     input_example = X.head(5)
     mlflow.sklearn.log_model(
         model,
-        "gradient_boosting_model",
+        name = "gradient_boosting_model",
         signature=signature,
         input_example=input_example
     )
 
- # Save the Run ID to a latest_run.txt
+ # Save the Run ID to the file latest_run.txt
     with open("latest_run.txt", "w") as f:
         f.write(run.info.run_id)
 

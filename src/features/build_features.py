@@ -2,15 +2,15 @@ import pandas as pd
 import re     
 from sklearn.model_selection import train_test_split
 
-# import the CSV file data/raw_data.csv
+# Import the raw data in the file raw_data.csv from data/raw
 df = pd.read_csv('data/raw/raw_data.csv')
 
-#Extract pH value from column 'coposition' and create new feature 'ph'
+# Extract pH value from column 'coposition' and create new feature 'ph'
 df['ph'] = df['composition'].str.split(',').str[-1].str.extract(r'(\d+\.?\d*)').astype(float)
 
-# ----Create a numeric feature for the concentration of every excipient in the 'composition' -----------------------------------------------------
+# Create a numeric feature for the concentration of every excipient in the dataset
 
-#Create new column with all excipients and without pH value called 'composition_without_ph'
+# Create a new column with all excipients and without pH value called 'composition_without_ph'
 df['composition_without_ph'] = df['composition'].str.split(',').str[0]
 df.drop('composition', axis=1, inplace=True)
 
@@ -49,7 +49,7 @@ for excipient in unique_excipients:
 df.drop('composition_without_ph', axis=1, inplace=True)
 
 #-----------------------------------------------------------------------------------
-# Data Correction
+# Further data correction
 
 # For a better overview data set is reduced to the most interessting variables we want to examine. Therefore id columns are dropped.
 df = df.drop(columns=['product', 'formulation_title'])
@@ -57,15 +57,15 @@ df = df.drop(columns=['product', 'formulation_title'])
 # change data type in order to make pandas functions more efficient
 df['protein_format'] = pd.Categorical(df['protein_format'])
 
-# Eliminate spaces and in all column names
+# Eliminate spaces in all column names
 df.columns = df.columns.str.replace(' ', '_')   
-# Make sure column names are lower case a
+# Make sure column names are lower case 
 df.columns = df.columns.str.lower()
 # Remove special characters from column names
 df.columns = df.columns.str.replace(r'[^a-z0-9_]', '', regex=True) 
 
-#Define input (X) and target (y)
-X = df.drop(columns=['tm_c'])  # Drop the target variable 'tm_c' from the features
+# Define features (X) and target (y)
+X = df.drop(columns=['tm_c'])
 y = df['tm_c']   
 
 #-----------------------------------------------------------------------------------
@@ -84,3 +84,6 @@ test_df['tm_c'] = y_test
 # Save train und test data as seperate CSV files
 train_df.to_csv('data/raw/all_features_train_data.csv', index=False)
 test_df.to_csv('data/raw/all_features_test_data.csv', index=False)
+# Print success message
+print(f'✅ New features were created and date set was splitted. Train data size: {train_df.shape}, Test data size: {test_df.shape}')
+

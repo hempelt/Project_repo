@@ -26,7 +26,7 @@ connection_string = (
 # Create SQLAlchemy engine
 engine = create_engine(connection_string)
 
-#Query the database and load data into a DataFrame
+# Query the database and load data into a DataFrame
 df = None
 try:
     query = f"SELECT * FROM {DB_CONFIG['table']}"
@@ -50,11 +50,11 @@ class Measurement(BaseModel):
 # Create a TypeAdapter for the Measurement model
 adapter = TypeAdapter(list[Measurement])
 
-
+# Check if the DataFrame is not None before validation
 if df is not None:
     # Validate the DataFrame against the Pydantic model
-    # Convert DataFrame to a list of dictionaries for validation
     try:
+        # Convert DataFrame to a list of dictionaries for validation
         validated = adapter.validate_python(df.to_dict(orient="records"))
         print("✅ No data type validation errors found.")
         # Export the validated DataFrame to a CSV file
@@ -66,5 +66,6 @@ if df is not None:
         print("Error:", e)
         print("❌ Data was not exported due to validation errors.")
 else:
+    # If df is None, print an error message
     print("❌ No data to save, DataFrame is None.")
     

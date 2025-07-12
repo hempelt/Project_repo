@@ -16,7 +16,7 @@ model = mlflow.sklearn.load_model(model_uri)
 # Import the processed test data
 df_test = pd.read_csv('data/processed/df_test_processed.csv')
 
-# Define input (X) and target (y)
+# Define features (X) and target (y)
 X = df_test.drop(columns=['tm_c'])  # Drop the target variable 'tm_c' from the features
 y = df_test['tm_c']   
 

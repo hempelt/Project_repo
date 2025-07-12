@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/6223fcade5644c50a4612ec74c205ee3/artifacts
+end_time: 1752328740858
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: active
+run_id: 6223fcade5644c50a4612ec74c205ee3
+run_name: angry-foal-228
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752328677626
+status: 3
+tags: []
+user_id: hempe

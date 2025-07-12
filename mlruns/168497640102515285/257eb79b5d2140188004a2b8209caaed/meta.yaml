@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/257eb79b5d2140188004a2b8209caaed/artifacts
+end_time: 1752327564337
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: active
+run_id: 257eb79b5d2140188004a2b8209caaed
+run_name: thoughtful-carp-454
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752327559354
+status: 3
+tags: []
+user_id: hempe

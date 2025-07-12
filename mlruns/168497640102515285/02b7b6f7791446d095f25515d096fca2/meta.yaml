@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hempe/Studium/Real_Project/Project_repo/mlruns/168497640102515285/02b7b6f7791446d095f25515d096fca2/artifacts
+end_time: 1752328412101
+entry_point_name: ''
+experiment_id: '168497640102515285'
+lifecycle_stage: active
+run_id: 02b7b6f7791446d095f25515d096fca2
+run_name: sedate-goose-672
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752327669970
+status: 3
+tags: []
+user_id: hempe
